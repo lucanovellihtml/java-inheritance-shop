@@ -17,7 +17,7 @@ public class Televisore extends Prodotto{
 
 	
 	//METODI GETTER/SETTER
-	public boolean isSmart() {
+	public boolean getSmart() {
 		return smart;
 	}
 
@@ -34,6 +34,13 @@ public class Televisore extends Prodotto{
 	}
 	
 	
-	
+	//METODO CHECK TELEVISORE SMART
+	public static void getCheckTvSmart(boolean smart) {
+		
+		if(smart)
+			System.out.println("- TIPOLOGIA ---> SMART");
+		else
+			System.out.println("- TIPOLOGIA ---> NON SMART");	
+	}
 	
 }
