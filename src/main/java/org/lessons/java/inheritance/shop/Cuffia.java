@@ -6,14 +6,13 @@ public class Cuffia extends Prodotto{
 	
 	//VARIABILI
 	protected String color;
-	protected boolean wireless, wired;
+	protected boolean wireless;
 	
 	//COSTURTTORE
-	public Cuffia(String name, String type, double price, double iva, String color, boolean wireless, boolean wired) {
+	public Cuffia(String name, String type, double price, double iva, String color, boolean wireless) {
 		super(name, type, price, iva);
 		this.color = color;
 		this.wireless = wireless;
-		this.wired = wired;
 	}
 
 	
@@ -34,14 +33,15 @@ public class Cuffia extends Prodotto{
 		this.wireless = wireless;
 	}
 
-	public boolean isWired() {
-		return wired;
-	}
 
-	public void setWired(boolean wired) {
-		this.wired = wired;
+	//METODO CHECK CUFFIA WIRELESS O WIRED
+	public void getCheckWiredWireless(boolean wireless) {
+		
+		if(wireless)
+			System.out.println("- TIPOLOGIA ---> WIRELESS");
+		else
+			System.out.println("- TIPOLOGIA ---> CON CAVO");	
 	}
-	
 	
 	
 	
