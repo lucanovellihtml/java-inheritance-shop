@@ -44,5 +44,12 @@ public class Cuffia extends Prodotto{
 	}
 	
 	
+	//METODO PER STAMPARE LE CARATTERISTICHE DEL PRODOTTO
+	@Override
+	public String toString() {	
+		return "- CODICE:" + this.code + "\n - NOME: " + this.name + "\n - MARCA: " + this.type + "\n - PREZZO SENZA IVA: " + this.price + "\n - COLORE: " + this.color + "\n - WIRELESS: " + this.wireless;
+	}
+	
+	
 	
 }

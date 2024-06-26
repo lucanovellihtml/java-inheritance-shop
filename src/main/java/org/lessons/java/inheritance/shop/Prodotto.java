@@ -1,5 +1,6 @@
 package org.lessons.java.inheritance.shop;
 
+import java.util.Scanner;
 
 //SUPERCLASSE
 public class Prodotto {
@@ -38,7 +39,7 @@ public class Prodotto {
 		this.name = name;
 	}
 
-	public String gType() {
+	public String getType() {
 		return type;
 	}
 
@@ -61,6 +62,13 @@ public class Prodotto {
 
 	public void setIva(double iva) {
 		this.iva = iva;
+	}
+	
+	
+	//METODO PER STAMPARE LE CARATTERISTICHE DEL PRODOTTO
+	@Override
+	public String toString() {	
+		return "- CODICE:" + this.code + "\n - NOME: " + this.name + "\n - MARCA: " + this.type;
 	}
 		
 }

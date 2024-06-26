@@ -31,7 +31,11 @@ public class Smartphone extends Prodotto{
 		this.disk = disk;
 	}
 	
-	
+	//METODO PER STAMPARE LE CARATTERISTICHE DEL PRODOTTO
+	@Override
+	public String toString() {	
+		return "- CODICE:" + this.code + "\n - NOME: " + this.name + "\n - MARCA: " + this.type + "\n - PREZZO SENZA IVA: " + this.price + "\n - CODE-IMEI: " + this.code + "\n - DISK: " + this.disk;
+	}
 	
 	
 	

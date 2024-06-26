@@ -42,5 +42,11 @@ public class Televisore extends Prodotto{
 		else
 			System.out.println("- TIPOLOGIA ---> NON SMART");	
 	}
+
 	
+	//METODO PER STAMPARE LE CARATTERISTICHE DEL PRODOTTO
+	@Override
+	public String toString() {	
+		return "- CODICE:" + this.code + "\n - NOME: " + this.name + "\n - MARCA: " + this.type + "\n - PREZZO SENZA IVA: " + this.price + "\n - SMART: " + this.smart + "\n - POLLICI: " + this.dimension;
+	}
 }
