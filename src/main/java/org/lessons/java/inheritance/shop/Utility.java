@@ -1,5 +1,7 @@
 package org.lessons.java.inheritance.shop;
 
+import java.util.Scanner;
+
 public class Utility {
 
 	//METODO CHE RESTITUISCE IL PREZZO COMPRENSIVO D'IVA
@@ -36,6 +38,51 @@ public class Utility {
 		
 		System.out.printf("- LUNGHEZZA CODE ---> " + codeZero + "\n");
 	}
+	
+	
+	//METODO CHECK INPUT PRODOTTO
+	public static void checkInputProduct(int choose) {
 		
+		Scanner characteristics = new Scanner(System.in);
+		System.out.println("- INSERISCI LA NOME DEL PRODOTTO ---> ");
+		String name = characteristics.nextLine();
+		System.out.println("- INSERISCI LA MARCA DEL PRODOTTO ---> ");
+		String type = characteristics.nextLine();
+		
+		
+		switch(choose) {
+		case 1:
+			System.out.println("-*-*-*- HAI SCELTO SMARTPHONE -*-*-*- ");
+			System.out.println("- INSERISCI IL CODE-IMEI DEL PRODOTTO ---> ");
+			String codeImei = characteristics.nextLine();
+			Smartphone smartPhone = new Smartphone(name, type, 100.99, 25, codeImei);
+			System.out.println("- PRODOTTO ---> \n" + smartPhone.toString());
+			break;
+		case 2: 
+			System.out.println("-*-*-*- HAI SCELTO TELEVISORE -*-*-*- ");
+			System.out.println("- INSERISCI SE IL PRODOTTO E' SMART [1]SI', [2]NO ---> ");
+			int chooseSmart = characteristics.nextInt();
+			boolean flagSmart = false;
+			if(chooseSmart == 1)
+				flagSmart = true;
+			Televisore television = new Televisore(name, type, 200.99, 25, flagSmart);
+			System.out.println("- PRODOTTO ---> \n" + television.toString());
+			break;
+		default:
+			System.out.println("-*-*-*- HAI SCELTO CUFFIA -*-*-*- ");
+			System.out.println("- INSERISCI IL COLORE DEL PRODOTTO ---> ");
+			String color = characteristics.nextLine();
+			System.out.println("- INSERISCI SE IL PRODOTTO E' WIRELESS [1]SI', [2]NO ---> ");
+			int chooseWireless = characteristics.nextInt();
+			boolean flagWireless = false;
+			if(chooseWireless == 1)
+				flagSmart = true;
+			Cuffia headSet = new Cuffia(name, type, 200.99, 25, color, flagWireless);
+			System.out.println("- PRODOTTO ---> \n" + headSet.toString());
+			break;
+		}
+		
+	}
+	
 	
 }
