@@ -41,7 +41,7 @@ public class Utility {
 	
 	
 	//METODO CHECK INPUT PRODOTTO
-	public static void checkInputProduct(int choose) {
+	public static void checkInputProduct(int choose, Object oggetto) {
 		
 		Scanner characteristics = new Scanner(System.in);
 		System.out.println("- INSERISCI LA NOME DEL PRODOTTO ---> ");
@@ -55,8 +55,8 @@ public class Utility {
 			System.out.println("-*-*-*- HAI SCELTO SMARTPHONE -*-*-*- ");
 			System.out.println("- INSERISCI IL CODE-IMEI DEL PRODOTTO ---> ");
 			String codeImei = characteristics.nextLine();
-			Smartphone smartPhone = new Smartphone(name, type, 100.99, 25, codeImei);
-			System.out.println("- PRODOTTO ---> \n" + smartPhone.toString());
+			oggetto = new Smartphone(name, type, 100.99, 25, codeImei);
+			System.out.println("- PRODOTTO ---> \n" + oggetto.toString());
 			break;
 		case 2: 
 			System.out.println("-*-*-*- HAI SCELTO TELEVISORE -*-*-*- ");
@@ -65,8 +65,8 @@ public class Utility {
 			boolean flagSmart = false;
 			if(chooseSmart == 1)
 				flagSmart = true;
-			Televisore television = new Televisore(name, type, 200.99, 25, flagSmart);
-			System.out.println("- PRODOTTO ---> \n" + television.toString());
+			oggetto = new Televisore(name, type, 200.99, 25, flagSmart);
+			System.out.println("- PRODOTTO ---> \n" + oggetto.toString());
 			break;
 		default:
 			System.out.println("-*-*-*- HAI SCELTO CUFFIA -*-*-*- ");
@@ -77,8 +77,8 @@ public class Utility {
 			boolean flagWireless = false;
 			if(chooseWireless == 1)
 				flagSmart = true;
-			Cuffia headSet = new Cuffia(name, type, 200.99, 25, color, flagWireless);
-			System.out.println("- PRODOTTO ---> \n" + headSet.toString());
+			oggetto = new Cuffia(name, type, 200.99, 25, color, flagWireless);
+			System.out.println("- PRODOTTO ---> \n" + oggetto.toString());
 			break;
 		}
 		

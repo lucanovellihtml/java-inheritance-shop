@@ -13,7 +13,8 @@ public class Carrello {
 		 */
 		Scanner input = new Scanner(System.in);
 		System.out.print("Inserisci [1]Smartphone, [2]Televisore, [3]Cuffia =");
-		Utility.checkInputProduct(input.nextInt());
+		Object oggetto = new Object();
+		Utility.checkInputProduct(input.nextInt(),oggetto);
 	}
 
 }
