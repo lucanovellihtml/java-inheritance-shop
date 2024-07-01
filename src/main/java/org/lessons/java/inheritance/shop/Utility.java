@@ -40,7 +40,10 @@ public class Utility {
 	}
 	
 	
-	//METODO CHECK INPUT PRODOTTO
+	/*
+	 * VIENE CONTROLLATO QUALE PRODOTTO HA SCELTO L'UTENTE DA INSERIRE NEL CARRELLO;
+	 * COME PARAMETRO VIENE PASSATO ANCHE UN OGGETTO GENERICO CHE VERRA' TIPIZZATO IN BASE AL CASE PRESO IN CONSIDERAZIONE;
+	 */
 	public static void checkInputProduct(int choose, Object oggetto) {
 		
 		Scanner characteristics = new Scanner(System.in);
